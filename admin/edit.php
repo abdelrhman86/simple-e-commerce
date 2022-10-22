@@ -8,7 +8,9 @@
 </head>
 <body>
        <?php
+       // get configration file
        require_once("..\config.php");
+       // get product id to edit
        $id = $_GET['id'];
         $row = mysqli_query($conn,"SELECT * from clothes where id =$id");
        $data = mysqli_fetch_array($row);

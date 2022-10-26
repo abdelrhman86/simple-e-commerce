@@ -190,6 +190,7 @@ main .data .contenar .card .chang button {
   background: var(--secand-color);
   border: none;
   color: aqua;
+  cursor: pointer;
 }
 
 .window {
@@ -213,4 +214,23 @@ main .data .contenar .card .chang button {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+
+.window-fixed a,
+.window-fixed span {
+  display: inline-block;
+  margin-top: 20px;
+  color: aqua;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.window-fixed a {
+  margin-left: 10%;
+  text-decoration: none;
+}
+
+.window-fixed span {
+  margin-left: 50%;
+  color: red;
 }

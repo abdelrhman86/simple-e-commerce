@@ -1,5 +1,5 @@
-let chang = document.querySelectorAll(".edit"),
-  delet = document.querySelectorAll(".delet");
+  let chang = document.querySelectorAll(".edit");
+  let delet = document.querySelectorAll(".delet");
 
 
 function craet(x) {
@@ -26,6 +26,7 @@ function craet(x) {
   }
   let creata2 = document.createElement("span");
   let creata2t = document.createTextNode(`no`);
+  creata2.classList = "ccc";
   creatd.appendChild(creatf);
   creata2.appendChild(creata2t);
   creatf.appendChild(creata2);
@@ -46,3 +47,4 @@ delet.forEach((e) => {
     craet("delete");
   })
 });
+//

@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --background : #243b55;
+  --box: rgba(0,0,0,.5);
+  --box-shadow: rgba(0,0,0,.6);
+  --white: #ffffff;
+  --main-color: #03e9f4;
+  background: var(--background);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: var(--box);
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 15px 25px  var(--box-shadow);
+  color: var(--white);
+}
+
+form h1 {
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+form input {
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--white);
+  margin: 10px 0;
+  padding: 0 10px;
+  letter-spacing: 4px;
+}
+
+form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+form input:focus ~ label {
+  color: var(--main-color);
+  font-size: 12px;
+  top: -5px;
+  left: 0;
+}
+
+form .sub {
+  position: relative;
+}
+
+form .sub button {
+  font-size: 16px;
+  color: var(--main-color);
+  background: transparent;
+  border: none;
+  padding: 10px;
+  margin: 20px 0 ;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+form .sub button:hover {
+  background: var(--main-color);
+  color: var(--white);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  box-shadow: 0 0 5px var(--main-color),
+  0 0 25px var(--main-color),
+  0 0 50px var(--main-color),
+  0 0 100px var(--main-color);
+}
+
+form .sub .or {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background: var(--main-color);
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+form .sub hr {
+  margin: 20px 0;
+}
+
+form .sub button span {
+  display: block;
+  position: absolute;
+}
+
+form .sub button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--main-color));
+  animation: ani-one 1s linear infinite;
+  -webkit-animation: ani-one 1s linear infinite;
+}
+
+form .sub button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--main-color));
+  animation: ani-two 1s linear infinite;
+  -webkit-animation: ani-two 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+form .sub button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--main-color));
+  animation: ani-three 1s linear infinite;
+  -webkit-animation: ani-three 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+form .sub button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--main-color));
+  animation: ani-four 1s linear infinite;
+  -webkit-animation: ani-four 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes ani-one {
+  0% {
+    left: -100%
+  }
+  50%,
+  100% {
+    left: 100%
+  }
+}
+
+@keyframes ani-two {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes ani-three {
+  0% {
+    right: -100%
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes ani-four {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.btn {
+  opacity: 0;
+  position: absolute;
+}
+
+footer {
+  height: 50px;
+}

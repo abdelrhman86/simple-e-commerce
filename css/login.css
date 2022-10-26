@@ -87,6 +87,7 @@ form .sub button {
   margin: 20px 0 ;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;

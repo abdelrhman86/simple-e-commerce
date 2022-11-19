@@ -59,10 +59,9 @@ if(isset($message)){
       <label for="password">Password</label>
     </div>
     <div class="sub">
-    <button class="subm">
+    <button class="subm" name="submit">
       <span></span><span></span><span></span><span></span>
       Log In
-      <input type="submit" name="submit" class="btn" value="sign in">
     </button>
     <hr>
     <span class="or">or</span>

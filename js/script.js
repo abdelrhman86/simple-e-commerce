@@ -14,13 +14,16 @@ function craet(x) {
   if (x === "chang") {
     let creata1 = document.createElement("a");
     let creata1t = document.createTextNode(`yes`);
-    creata1.setAttribute(`href`, `edit.php?id=$row[id]`)
+    // creata1.setAttribute(`href`, `edit.php?id=$row[id]`)
+    creata1.setAttribute(`href`, `edit.php?<php id=$row[id]?>`)
     creata1.appendChild(creata1t);
     creatf.appendChild(creata1);
   } else {
     let creata1 = document.createElement("a");
     let creata1t = document.createTextNode(`yes`);
-    creata1.setAttribute(`href`, `delete.php?id=$row[id]`)
+    // creata1.setAttribute(`href`, `delete.php?id=$row[id]`)
+    creata1.setAttribute(`href`, `delete.php<?=$id=$row[id]?>`)
+
     creata1.appendChild(creata1t);
     creatf.appendChild(creata1);
   }
